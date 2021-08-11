@@ -10,6 +10,7 @@ import { Grid } from '@material-ui/core';
 
 
 const card = ({ post }) => {
+    //eslint-disable-next-line
     const useStyles = makeStyles({
         root: {
             maxWidth: 345,
