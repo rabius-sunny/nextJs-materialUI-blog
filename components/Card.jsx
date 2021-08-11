@@ -7,14 +7,15 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
 
-const useStyles = makeStyles({
-    root: {
-        maxWidth: 345,
-        margin: '0 auto'
-    },
-});
+
 
 const card = ({ post }) => {
+    const useStyles = makeStyles({
+        root: {
+            maxWidth: 345,
+            margin: '0 auto'
+        },
+    });
     const classes = useStyles();
 
     return (
