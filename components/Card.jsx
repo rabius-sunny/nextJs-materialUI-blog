@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -10,18 +9,10 @@ import { Grid } from '@material-ui/core';
 
 
 const card = ({ post }) => {
-    //eslint-disable-next-line
-    const useStyles = makeStyles({
-        root: {
-            maxWidth: 345,
-            margin: '0 auto'
-        },
-    });
-    const classes = useStyles();
 
     return (
         <Grid item md={4} sm={6} xs={12}>
-            <Card className={classes.root}>
+            <Card style={{maxWidth: '345px', margin: '0 auto'}}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
