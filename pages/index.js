@@ -1,5 +1,6 @@
 import { Button, Container, Grid } from '@material-ui/core'
 import Head from 'next/head'
+import Link from 'next/link'
 import Card from '../components/Card'
 import Navigation from '../components/Navigation'
 import styles from '../styles/Home.module.css'
@@ -30,7 +31,7 @@ const Home = ({ posts }) => {
           <Button href="/post" color="primary" variant="contained">dkfjd</Button>
           <Grid container spacing={3}>
             {
-              posts.slice(5).map(post => <Card key={post._id} />)
+              posts.slice(5).map(post => <Link href={`/post/${post._id}`} key={post._id}><a><Card key={post._id} post={post} /></a></Link>)
             }
           </Grid>
         </Container>

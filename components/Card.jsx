@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     },
 });
 
-const card = () => {
+const card = ({ post }) => {
     const classes = useStyles();
 
     return (
@@ -24,17 +24,16 @@ const card = () => {
                     <CardMedia
                         component="img"
                         alt="Contemplative Reptile"
-                        height="140"
+                        height="200"
                         image="https://i.ibb.co/gtWC6Rh/variables.png"
-                        title="Contemplative Reptile"
+                        title={post.title}
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                            Lizard
+                            {post.title}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                            across all continents except Antarctica
+                            {post.post.slice(0, 200)}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
